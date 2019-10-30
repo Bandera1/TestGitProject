@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Border>
+            <ListBox >
+                <ListBox.DataContext>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                        <TextBlock Text="{Binding Price}"></TextBlock>
+                        <TextBlock Text="{Binding Category}"></TextBlock>
+                        <TextBlock Text="/////////////////"></TextBlock>
+
+                    </StackPanel>
+                </ListBox.DataContext>
+            </ListBox>
+        </Border>
         
     </Grid>
 </Window>
