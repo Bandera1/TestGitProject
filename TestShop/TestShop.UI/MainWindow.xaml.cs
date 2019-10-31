@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestShop.DAL.Services;
 
 namespace TestShop.UI
 {
@@ -20,9 +21,20 @@ namespace TestShop.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<ProductVM> Products = new List<ProductVM>();
+        public ProductService service = new ProductService();
         public MainWindow()
         {
             InitializeComponent();
+            var products = service.GetProducts();
+            Products = products.Select(x => new ProductVM
+            {
+                Name=x.Name,
+                Price=x.Price,
+                Category=x.Category,
+                Id=x.Id
+            }).ToList();
+            list_box.ItemsSource = Products;
         }
     }
 }

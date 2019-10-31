@@ -8,18 +8,21 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Border>
-            <ListBox >
-                <ListBox.DataContext>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Name}"></TextBlock>
-                        <TextBlock Text="{Binding Price}"></TextBlock>
-                        <TextBlock Text="{Binding Category}"></TextBlock>
-                        <TextBlock Text="/////////////////"></TextBlock>
+            <ListBox Name="list_box">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}"></TextBlock>
+                            <TextBlock Text="{Binding Price}"></TextBlock>
+                            <TextBlock Text="{Binding Category}"></TextBlock>
+                            <TextBlock Text="/////////////////"></TextBlock>
 
-                    </StackPanel>
-                </ListBox.DataContext>
+                        </StackPanel>
+                    </DataTemplate>
+
+                </ListBox.ItemTemplate>
             </ListBox>
         </Border>
-        
+
     </Grid>
 </Window>
