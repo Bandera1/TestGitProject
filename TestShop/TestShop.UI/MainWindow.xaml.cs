@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TestShop.DAL.Services;
+using System.Data.Common;
 
 namespace TestShop.UI
 {
@@ -26,7 +27,7 @@ namespace TestShop.UI
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = "Vlad";
+            this.Title = "Mike";
 
             var products = service.GetProducts();
             Products = products.Select(x => new ProductVM
