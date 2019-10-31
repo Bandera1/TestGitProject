@@ -26,10 +26,12 @@ namespace TestShop.UI
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = "Mike";
+
             var products = service.GetProducts();
             Products = products.Select(x => new ProductVM
             {
-                Name=x.Name,
+                Name=x.Name+"V",
                 Price=x.Price,
                 Category=x.Category,
                 Id=x.Id
