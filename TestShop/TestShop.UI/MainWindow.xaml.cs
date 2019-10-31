@@ -26,7 +26,7 @@ namespace TestShop.UI
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = "Mike";
+            this.Title = "Vlad";
 
             var products = service.GetProducts();
             Products = products.Select(x => new ProductVM
